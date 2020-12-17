@@ -6,17 +6,19 @@ p {
   margin: 0;
 }
 
-a {
-  cursor: pointer;
+a.basket,
+a.logo {
+  border: none;
 }
 
-a:not(.logo) {
+a {
+  cursor: pointer;
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
 
-a:not(.logo):hover {
+a:hover {
   border-color: #9e9776;
 }
 
@@ -30,7 +32,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background-image: url(https://cdn.pixabay.com/photo/2015/04/20/22/17/magnolia-732332_960_720.png);
-  box-shadow: 0 0 500px 100px rgba(0,0,0,0.25);
+  box-shadow: 0 0 500px 100px rgba(0, 0, 0, 0.25);
 }
 
 header {
@@ -55,6 +57,10 @@ header ul {
   display: flex;
 }
 
+header ul li:last-of-type a {
+  margin: 0;
+}
+
 header a {
   font-size: 28px;
 }
@@ -62,6 +68,23 @@ header a {
 header a {
   margin-right: 40px;
   border-bottom: 2px solid transparent;
+}
+
+.basket {
+  display: block;
+}
+
+.basket svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.basket:hover svg {
+  fill: #9e9776;
+  transform: scale(1.25);
 }
 
 .main {
@@ -78,6 +101,11 @@ header a {
 
 .main.main--contacts .main__about {
   padding: 0 80px 30px;
+}
+
+.main.main--basket {
+  display: flex;
+  flex-direction: column;
 }
 
 .main__photo {
@@ -142,7 +170,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 260px;
+  width: 270px;
   min-height: 560px;
   padding: 20px;
   box-shadow: 0 0 10px 1px #9e9776;
@@ -194,53 +222,63 @@ footer p {
 }
 
 .items {
-    position: relative;
-    width: 1000px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+  position: relative;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.price {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .items:before {
-    content: 'Корзина пуста';
-    position: absolute;
-    display: block;
-    width: 300px;
-    text-align: center;
-    left: calc(50% - 150px);
-    top: 30px;
-    z-index: 1;
+  content: "Корзина пуста";
+  position: absolute;
+  display: block;
+  width: 300px;
+  text-align: center;
+  left: calc(50% - 150px);
+  top: 30px;
+  z-index: 1;
 }
 
-.item {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    padding: 0 20px;
-    background-color: #000;
+.item,
+.price {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  background-color: #000;
 }
 
-.item img {
-    width: 50px;
-    height: auto;
+.item img,
+.price img {
+  width: 50px;
+  height: auto;
 }
 
-.item h2 {
-    width: 350px;
-    margin-left: 30px;
-    text-align: left;
-    line-height: 1;
+.item h2,
+.price h2 {
+  width: 350px;
+  margin-left: 30px;
+  text-align: left;
+  line-height: 1;
 }
 
 .item span,
-.item b {
-    margin-left: auto;
+.item b,
+.price span,
+.price b {
+  margin-left: auto;
 }
 
-
-.item button {
+.item button,
+.price button {
   display: block;
   width: 200px;
   padding: 15px;
@@ -252,7 +290,58 @@ footer p {
   margin-left: auto;
 }
 
-.item button:hover {
+.item button:hover,
+.price button:not(:disabled):hover {
   background-color: transparent;
   color: #fff;
+}
+
+.price button:disabled {
+  opacity: 0.2;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  /* display: none; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px 1px #9e9776;
+  color: #000;
+  z-index: 5;
+}
+
+.modal h2 {
+  margin: 0;
+}
+
+.modal button {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  margin-top: auto;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.hidden {
+  display: none;
 }

@@ -24,9 +24,16 @@
     <main class="main main--basket">
       <div class="main__about">
         <h1>Корзина</h1>
-        <img class="main__divider" src="assets/divider.png" alt="Разделитель">
+        <img class="main__divider" src="assets/divider.png" alt="Разделитель" />
         <ul class="items">
         </ul>
+        <div class="price">
+          <img />
+          <h2>Итого:</h2>
+          <span>0 руб.</span>
+          <b>0x</b>
+          <button disabled>Оформить</button>
+        </div>
       </div>
     </main>
     <footer>
@@ -36,18 +43,20 @@
       />
       <p>© 2016–2020 Лаб Фрагранс — Распыляя ноты</p>
     </footer>
+    <div class="modal hidden">
+      <h2>Заказ оформлен!</h2>
+      <button>Закрыть</button>
+    </div>
     <template id="item">
       <li class="item">
-        <img
-          src="https://lab-fragrance.ru/upload/resize_cache/iblock/e1d/600_600_1/e1d6e11da8c25ee6ea302974c51b4435.png"
-          alt="Санталь Нуар"
-        />
-        <h2>Санталь Нуар</h2>
-        <span>4 990 руб.</span>
-        <b>1x</b>
+        <img />
+        <h2></h2>
+        <span></span>
+        <b></b>
         <button>Удалить</button>
       </li>
     </template>
+    <script src="js/modal.js"></script>
     <script src="js/basket.js"></script>
   </body>
 </html>
