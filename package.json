@@ -1,0 +1,23 @@
+{
+  "name": "lab-fragrance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VICTOR-ia/fragrance.git"
+  },
+  "dependencies": {
+    "serve": "^10.0.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VICTOR-ia/fragrance/issues"
+  },
+  "homepage": "https://github.com/VICTOR-ia/fragrance#readme"
+}
