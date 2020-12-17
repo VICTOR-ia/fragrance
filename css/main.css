@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:not(.logo) {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:not(.logo):hover {
+  border-color: #9e9776;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/20/22/17/magnolia-732332_960_720.png);
+  box-shadow: 0 0 500px 100px rgba(0,0,0,0.25);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  z-index: 10;
+  box-shadow: 0 0 10px 1px rgba(158, 151, 118, 0.3);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header ul {
+  color: #fff;
+  display: flex;
+}
+
+header a {
+  font-size: 28px;
+}
+
+header a {
+  margin-right: 40px;
+  border-bottom: 2px solid transparent;
+}
+
+.main {
+  background-color: #000;
+  min-height: calc(100vh - 175px - 122px);
+}
+
+.main h1 {
+  color: #9e9776;
+  text-align: center;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.main.main--contacts .main__about {
+  padding: 0 80px 30px;
+}
+
+.main__photo {
+  display: block;
+  width: 100%;
+  opacity: 0.4;
+  margin-top: -80px;
+}
+
+.main__video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.main__about {
+  margin: 0;
+  padding: 0 80px 80px;
+  line-height: 1.6;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.main__divider {
+  display: block;
+  width: 40%;
+  margin: 0 auto 40px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #000;
+}
+
+footer p {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+
+.products li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  min-height: 560px;
+  padding: 20px;
+  box-shadow: 0 0 10px 1px #9e9776;
+  border-radius: 8px;
+  margin-bottom: 48px;
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: 0.3s;
+}
+
+.products li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px 2px #9e9776;
+}
+
+.products li h2 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-top: auto;
+}
+
+.products li span {
+  color: #fff;
+  display: block;
+  margin-top: auto;
+}
+
+.products li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.products li button {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  margin-top: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.products li button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.items {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.items:before {
+    content: 'Корзина пуста';
+    position: absolute;
+    display: block;
+    width: 300px;
+    text-align: center;
+    left: calc(50% - 150px);
+    top: 30px;
+    z-index: 1;
+}
+
+.item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    background-color: #000;
+}
+
+.item img {
+    width: 50px;
+    height: auto;
+}
+
+.item h2 {
+    width: 350px;
+    margin-left: 30px;
+    text-align: left;
+    line-height: 1;
+}
+
+.item span,
+.item b {
+    margin-left: auto;
+}
+
+
+.item button {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.item button:hover {
+  background-color: transparent;
+  color: #fff;
+}

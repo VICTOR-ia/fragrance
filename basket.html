@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Fragrance</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="index.html">
+        <img
+          src="https://lab-fragrance.ru/local/frontend/images/logo_fragrance.svg"
+          alt="Логотип"
+        />
+      </a>
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="delivery.html">Оплата и Доставка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="basket.html">Корзина</a></li>
+      </ul>
+    </header>
+    <main class="main main--basket">
+      <div class="main__about">
+        <h1>Корзина</h1>
+        <img class="main__divider" src="assets/divider.png" alt="Разделитель">
+        <ul class="items">
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <img
+        src="https://lab-fragrance.ru/local/frontend/images/logo_fragrance_gold.svg"
+        alt="Логотип"
+      />
+      <p>© 2016–2020 Лаб Фрагранс — Распыляя ноты</p>
+    </footer>
+    <template id="item">
+      <li class="item">
+        <img
+          src="https://lab-fragrance.ru/upload/resize_cache/iblock/e1d/600_600_1/e1d6e11da8c25ee6ea302974c51b4435.png"
+          alt="Санталь Нуар"
+        />
+        <h2>Санталь Нуар</h2>
+        <span>4 990 руб.</span>
+        <b>1x</b>
+        <button>Удалить</button>
+      </li>
+    </template>
+    <script src="js/basket.js"></script>
+  </body>
+</html>
